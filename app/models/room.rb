@@ -1,6 +1,8 @@
 class Room < ActiveRecord::Base
-  attr_accessible :description, :location, :title
   def complete_name
     "#{title}, #{location}"
   end
+end
+def Room_params
+  parans.require(:title).permit(:description, :location, :title)
 end
