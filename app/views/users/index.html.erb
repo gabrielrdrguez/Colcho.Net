@@ -1,0 +1,5 @@
+<% @user.each do |user| %>
+<br> <%=user.full_name %> <%=user.email %> <%= link_to "Editar", "/users/#{user.id}/edit"  %>
+<%end %>
+<br>
+<%= link_to "Novo usuario", "/users/new"  %>
